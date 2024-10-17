@@ -1,0 +1,55 @@
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+platform:ios, '15.0'
+target 'Luckey'
+use_modular_headers!
+use_frameworks!
+
+# Base Function
+pod 'KeychainSwift'
+pod 'Moya'
+pod 'Kingfisher'
+pod 'ZIPFoundation'
+pod 'ObjectMapper'
+pod 'CryptoSwift'
+pod 'HandyJSON'
+pod 'Cache'
+pod 'WKWebViewJavascriptBridge'
+pod 'SQLite.swift'
+
+# Business
+#pod 'Firebase/AnalyticsWithoutAdIdSupport'
+#pod 'FirebaseCrashlytics'
+#pod 'FirebaseRemoteConfig'
+#pod 'FirebaseMessaging'
+
+# UI
+#pod 'R.swift'
+pod 'SnapKit'
+pod 'Bartinter'
+pod 'Toast-Swift'
+pod 'Refreshable'
+pod "GSRefresh"
+
+# Animation
+pod 'ViewAnimator'
+pod 'EasyAnimation'
+pod 'lottie-ios'
+pod 'Hero'
+
+# Tools
+pod 'ReachabilitySwift'
+pod 'SwiftDate'
+pod 'SwifterSwift'
+pod 'SwiftyJSON'
+pod 'SwiftyUserDefaults'
+pod 'Haptica'
+pod 'Peep'
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+  end
+end
