@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/LuckeyOfficial/LUCKEY/tree/main/KeyPredictorPro">
+  <a href="https://github.com/LuckeyOfficial/LUCKEY/tree/main/Type-Protocol">
     <img src="static/img/logo.svg">
   </a>
 </h1>
@@ -7,7 +7,7 @@
 
 ## Introduction
 
-KeyPredictorPro is an open-source project designed to intelligently predict and recommend products that users might be interested in by analyzing their keyboard inputs. The project employs federated learning principles, training models locally on user devices to protect user privacy. This means that user data never leaves their device, complying with strict data privacy policies.
+Type Protocol is an open-source project designed to intelligently predict and recommend products that users might be interested in by analyzing their keyboard inputs. The project employs federated learning principles, training models locally on user devices to protect user privacy. This means that user data never leaves their device, complying with strict data privacy policies.
 
 Based on the Google AI team's paper "[Federated Learning for Mobile Keyboard Prediction](https://arxiv.org/pdf/1811.03604.pdf)," we have improved upon this method. By analyzing keyboard inputs, we can predict and recommend products that meet user needs.
 
@@ -22,7 +22,7 @@ The key innovation of this work lies in combining advanced machine learning tech
 
 ### Dataset
 
-KeyPredictorPro uses the [Sentiment140 dataset](https://huggingface.co/datasets/stanfordnlp/sentiment140) provided by Alec Go, Richa Bhayani, and Lei Huang, which contains 1,600,000 tweets. We chose Twitter data because it closely resembles the input data from keyboard applications. This assumption is based on the fact that most people use smartphones to communicate with friends and post on social media.
+Type Protocol uses the [Sentiment140 dataset](https://huggingface.co/datasets/stanfordnlp/sentiment140) provided by Alec Go, Richa Bhayani, and Lei Huang, which contains 1,600,000 tweets. We chose Twitter data because it closely resembles the input data from keyboard applications. This assumption is based on the fact that most people use smartphones to communicate with friends and post on social media.
 
 The dataset can be found on:
 - [Hugging Face](https://huggingface.co/datasets/stanfordnlp/sentiment140)
@@ -149,11 +149,11 @@ Top-1 Federated Learning Accuracy | Top-3 Federated Learning Accuracy
 :-------------------------------:|:-------------------------------:
 ![](static/img/top1_fl.png)      | ![](static/img/top3_fl.png)
 
-The results demonstrate that the KeyPredictorPro project has successfully achieved intelligent prediction and recommendation of products that users may find interesting. By incorporating federated learning, the project effectively safeguards user privacy. This innovation combines advanced machine learning techniques with privacy protection mechanisms, ensuring both the security of user data and personalized recommendations. The project showcases how valuable product recommendations can be provided to users without compromising privacy.
+The results demonstrate that the Type Protocol project has successfully achieved intelligent prediction and recommendation of products that users may find interesting. By incorporating federated learning, the project effectively safeguards user privacy. This innovation combines advanced machine learning techniques with privacy protection mechanisms, ensuring both the security of user data and personalized recommendations. The project showcases how valuable product recommendations can be provided to users without compromising privacy.
 
 ## Directory Structure
 ```
-The KeyPredictorPro directory structure is as follows:
+The Type Protocol directory structure is as follows:
 .  
 ├── data                                          # Datasets and sample data
 │   └── GoogleNews-vectors-negative300.bin        # Google News pre-trained word vectors
@@ -182,7 +182,7 @@ Ensure that your environment meets the following requirements:
 
 ```bash
 git clone https://github.com/LuckeyOfficial/LUCKEY
-cd KeyPredictorPro
+cd Type-Protocol
 pip install -r requirements.txt
 ```
 
@@ -211,10 +211,10 @@ python main.py
 ```
 ## Academic Insights
 
-KeyPredictorPro is built upon the principles of federated learning, enhancing user privacy through a decentralized training process. This methodology aligns with the latest advancements in privacy-preserving machine learning research, as discussed in the paper "[Federated Learning: Collaborative Machine Learning without Centralized Training Data](https://research.google/blog/federated-learning-collaborative-machine-learning-without-centralized-training-data/)".
+Type Protocol is built upon the principles of federated learning, enhancing user privacy through a decentralized training process. This methodology aligns with the latest advancements in privacy-preserving machine learning research, as discussed in the paper "[Federated Learning: Collaborative Machine Learning without Centralized Training Data](https://research.google/blog/federated-learning-collaborative-machine-learning-without-centralized-training-data/)".
 
 The project leverages pre-trained word embeddings from GoogleNews-vectors-negative300, enabling the model to harness semantic understanding of words without the need for retraining word embeddings. This approach is substantiated by research findings, demonstrating that pre-trained word embeddings can significantly enhance model performance (Mikolov et al., 2013).
 
 ## License
 
-KeyPredictorPro is released under the MIT License. For details, please refer to the [LICENSE](./LICENSE) file.
+Type Protocol is released under the MIT License. For details, please refer to the [LICENSE](./LICENSE) file.
